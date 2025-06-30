@@ -1,288 +1,121 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT & Technik Dienstleistungen</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mmtechnik – IT- & Technik-Dienstleistungen in Baden</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; }
+    .container { max-width:1200px; margin:0 auto; padding:20px; }
+    .header { text-align:center; padding:40px 0; color:white; }
+    .header h1 { font-size:3rem; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
+    .header p { font-size:1.2rem; opacity:0.9; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
+    .main-content { background:white; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.1); overflow:hidden; margin:-40px 20px 40px; }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .hero-image { width:100%; height:auto; border-radius:20px 20px 0 0; }
 
-        .header {
-            text-align: center;
-            padding: 60px 0;
-            color: white;
-        }
+    .intro-section { padding:60px 40px; text-align:center; background:linear-gradient(45deg,#f8f9fa,#e9ecef); }
+    .intro-section h2 { color:#495057; margin-bottom:20px; font-size:2rem; }
+    .intro-section p { font-size:1.1rem; color:#6c757d; max-width:700px; margin:0 auto; }
 
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    .services-section { padding:60px 40px; }
+    .services-title { text-align:center; margin-bottom:40px; }
+    .services-title h2 { color:#495057; font-size:2.3rem; margin-bottom:10px; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:30px; }
 
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+    .service-card { background:#f8f9fa; padding:30px; border-radius:15px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; border:1px solid #e9ecef; }
+    .service-card:hover { transform:translateY(-5px); box-shadow:0 15px 30px rgba(0,0,0,0.1); }
+    .service-icon { font-size:3rem; margin-bottom:15px; color:#667eea; }
+    .service-card h3 { color:#495057; margin-bottom:10px; font-size:1.3rem; }
+    .service-card p { color:#6c757d; font-size:0.95rem; }
 
-        .main-content {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin: -40px 20px 40px;
-        }
+    .contact-section { background:linear-gradient(135deg,#667eea,#764ba2); color:white; padding:60px 40px; text-align:center; }
+    .contact-section h2 { margin-bottom:20px; font-size:2.3rem; }
+    .contact-section p { max-width:600px; margin:0 auto 30px; }
+    .contact-info { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:20px; }
+    .contact-item { display:flex; align-items:center; gap:10px; font-size:1.1rem; }
+    .cta-button { display:inline-block; background:white; color:#667eea; padding:15px 30px; border-radius:50px; text-decoration:none; font-weight:bold; margin-top:30px; transition:transform 0.3s; }
+    .cta-button:hover { transform:scale(1.05); }
 
-        .intro-section {
-            padding: 60px 40px;
-            text-align: center;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-        }
+    .footer { text-align:center; padding:30px; color:white; opacity:0.8; font-size:0.9rem; }
 
-        .intro-section h2 {
-            color: #495057;
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        .intro-section p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .services-section {
-            padding: 60px 40px;
-        }
-
-        .services-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .services-title h2 {
-            color: #495057;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e9ecef;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
-
-        .service-card h3 {
-            color: #495057;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .service-card p {
-            color: #6c757d;
-            font-size: 0.95rem;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .main-content {
-                margin: -20px 10px 20px;
-            }
-            
-            .intro-section, .services-section, .contact-section {
-                padding: 40px 20px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-    </style>
+    @media (max-width:768px){
+        .header h1{ font-size:2rem; }
+        .intro-section, .services-section, .contact-section{ padding:40px 20px; }
+        .contact-info{ flex-direction:column; gap:15px; }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>IT & Technik Services</h1>
-            <p>Professionelle Lösungen für Ihr digitales Business</p>
-        </header>
+<div class="container">
+    <header class="header">
+        <h1>mmtechnik</h1>
+        <p>IT- & Technik-Dienstleistungen aus Baden, Schweiz</p>
+    </header>
 
-        <main class="main-content">
-            <section class="intro-section">
-                <h2>Über mich</h2>
-                <p>
-                    Als IT-Enthusiast unterstütze ich Sie dabei, digitale Lösungen zu finden, die wirklich funktionieren. 
-                    Meine Leidenschaft für moderne Technologien kombiniere ich mit einem praktischen Ansatz - 
-                    damit Sie sich auf Ihr Geschäft konzentrieren können, während die IT einfach läuft.
-                </p>
-            </section>
+    <main class="main-content">
+        <img src="images/header.jpg" alt="IT Dienstleistungen Baden" class="hero-image">
 
-            <section class="services-section">
-                <div class="services-title">
-                    <h2>Meine Dienstleistungen</h2>
+        <section class="intro-section">
+            <h2>Über Mathias Melliger</h2>
+            <p>Ich helfe kleinen Unternehmen in Baden und Umgebung, ihre IT einfach, sicher und effizient zu gestalten – mit persönlicher Beratung, direktem Support und praxisnahen Lösungen. Ihre Technik soll Sie nicht aufhalten, sondern vorwärtsbringen.</p>
+        </section>
+
+        <section class="services-section">
+            <div class="services-title">
+                <h2>Was ich für Sie tun kann</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>IT-Support & Wartung</h3>
+                    <p>Persönlicher Support für PCs, Server & Netzwerke – damit alles stabil läuft</p>
                 </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">💻</div>
-                        <h3>IT-Support & Wartung</h3>
-                        <p>Technischer Support, Systemwartung und Problemlösung für Ihre IT-Infrastruktur</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🔧</div>
-                        <h3>Hardware Installation</h3>
-                        <p>Professionelle Installation und Konfiguration von Computern, Servern und Netzwerkkomponenten</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">🌐</div>
-                        <h3>Netzwerk & Sicherheit</h3>
-                        <p>Aufbau und Verwaltung von Netzwerken, Firewall-Konfiguration und IT-Sicherheitsberatung</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">☁️</div>
-                        <h3>Cloud-Lösungen</h3>
-                        <p>Migration zu Cloud-Services, Backup-Strategien und moderne Arbeitsplatz-Lösungen</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">📱</div>
-                        <h3>Digitalisierung</h3>
-                        <p>Beratung und Umsetzung von Digitalisierungsprojekten für effizientere Geschäftsprozesse</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">⚡</div>
-                        <h3>Notfall-Service</h3>
-                        <p>Schnelle Hilfe bei kritischen IT-Problemen und Systemausfällen</p>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Hardware Einrichtung</h3>
+                    <p>Installation & Konfiguration neuer Geräte vor Ort oder remote</p>
                 </div>
-            </section>
-
-            <section class="contact-section">
-                <h2>Kontakt aufnehmen</h2>
-                <p>Haben Sie Fragen oder benötigen Sie IT-Unterstützung? Kontaktieren Sie mich für ein unverbindliches Beratungsgespräch.</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <span>info@ihre-domain.ch</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱</span>
-                        <span>+41 77 265 94 78</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <span>Region Baden</span>
-                    </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Netzwerk & Sicherheit</h3>
+                    <p>WLAN, Firewall, Backups & Sicherheit – maßgeschneidert für KMU</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Lösungen</h3>
+                    <p>Microsoft 365, Cloud-Backups & digitale Zusammenarbeit</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Digitalisierung</h3>
+                    <p>Prozesse vereinfachen & modernisieren, digital besser arbeiten</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Notfallservice</h3>
+                    <p>Unkomplizierte Hilfe, wenn etwas dringend nicht funktioniert</p>
+                </div>
+            </div>
+        </section>
 
-                <a href="mailto:info@ihre-domain.ch" class="cta-button">Jetzt Kontakt aufnehmen</a>
-            </section>
-        </main>
+        <section class="contact-section">
+            <h2>Kontaktieren Sie mich</h2>
+            <p>Sie möchten Ihre IT verbessern oder haben ein akutes Problem? Schreiben Sie mir – ich antworte persönlich und zeitnah.</p>
+            <div class="contact-info">
+                <div class="contact-item">📧 info@mmtechnik.com</div>
+                <div class="contact-item">📱 +41 77 265 94 78</div>
+                <div class="contact-item">📍 Baden, Aargau</div>
+            </div>
+            <a href="mailto:info@mmtechnik.com" class="cta-button">Jetzt Kontakt aufnehmen</a>
+        </section>
+    </main>
 
-        <footer class="footer">
-            <p>&copy; 2025 mmtechnik. Alle Rechte vorbehalten.</p>
-        </footer>
-    </div>
+    <footer class="footer">
+        &copy; 2025 Mathias Melliger – mmtechnik | <a href="https://www.linkedin.com/in/mathias-melliger-b3a091171/" style="color:white; text-decoration:underline;">LinkedIn</a>
+    </footer>
+</div>
 </body>
 </html>
