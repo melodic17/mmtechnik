@@ -38,7 +38,6 @@ If you’re into **tech experiments, homelabs, or just geeking out about hardwar
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com)  
 [![Website](https://img.shields.io/badge/Website-mmtechnik.com-333?style=for-the-badge&logo=google-chrome)](http://mmtechnik.com)  
-[![Discord](https://img.shields.io/badge/Discord-Let’s%20Chat-5865F2?style=for-the-badge&logo=discord&logoColor=white)](#)  
 
 ---
 ✨ _“Turning wrenches into scripts, and homelabs into playgrounds.”_  
