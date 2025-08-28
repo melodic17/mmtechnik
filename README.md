@@ -33,15 +33,6 @@
 
 ---
 
-## 📊 GitHub Stats  
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mmtechnik&show_icons=true&theme=radical" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mmtechnik&layout=compact&theme=radical" height="165">
-</p>
-
----
-
 ## 🤝 Let’s Connect  
 If you’re into **tech experiments, homelabs, or just geeking out about hardware** → I’m always open to connect!  
 
