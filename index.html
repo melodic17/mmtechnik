@@ -3,48 +3,62 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>mmtechnik – IT- & Technik-Dienstleistungen in Baden</title>
+<title>mmtechnik – IT-Dienstleistungen</title>
 <style>
+    /* === Base === */
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; }
-    .container { max-width:1200px; margin:0 auto; padding:20px; }
-    .header { text-align:center; padding:40px 0; color:white; }
-    .header h1 { font-size:3rem; margin-bottom:10px; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
-    .header p { font-size:1.2rem; opacity:0.9; }
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        line-height:1.6; 
+        color:#e5e5e5; 
+        background:#0f172a; /* Dark navy background */
+    }
+    .container { max-width:1100px; margin:0 auto; padding:20px; }
 
-    .main-content { background:white; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.1); overflow:hidden; margin:-40px 20px 40px; }
+    /* === Header === */
+    .header { text-align:center; padding:70px 0 40px; }
+    .header h1 { font-size:3rem; margin-bottom:12px; color:#38bdf8; }
+    .header p { font-size:1.2rem; color:#cbd5e1; }
+
+    /* === Card Wrapper === */
+    .main-content { background:#1e293b; border-radius:20px; box-shadow:0 12px 25px rgba(0,0,0,0.6); margin:-30px 15px 40px; overflow:hidden; }
 
     .hero-image { width:100%; height:auto; border-radius:20px 20px 0 0; }
 
-    .intro-section { padding:60px 40px; text-align:center; background:linear-gradient(45deg,#f8f9fa,#e9ecef); }
-    .intro-section h2 { color:#495057; margin-bottom:20px; font-size:2rem; }
-    .intro-section p { font-size:1.1rem; color:#6c757d; max-width:700px; margin:0 auto; }
+    /* === Intro === */
+    .intro-section { padding:50px 30px; text-align:center; background:#111827; }
+    .intro-section h2 { color:#38bdf8; margin-bottom:15px; font-size:2rem; }
+    .intro-section p { font-size:1.05rem; color:#94a3b8; max-width:650px; margin:0 auto; }
 
-    .services-section { padding:60px 40px; }
+    /* === Services === */
+    .services-section { padding:60px 30px; }
     .services-title { text-align:center; margin-bottom:40px; }
-    .services-title h2 { color:#495057; font-size:2.3rem; margin-bottom:10px; }
-    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:30px; }
+    .services-title h2 { color:#38bdf8; font-size:2.2rem; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; margin-top:30px; }
 
-    .service-card { background:#f8f9fa; padding:30px; border-radius:15px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; border:1px solid #e9ecef; }
-    .service-card:hover { transform:translateY(-5px); box-shadow:0 15px 30px rgba(0,0,0,0.1); }
-    .service-icon { font-size:3rem; margin-bottom:15px; color:#667eea; }
-    .service-card h3 { color:#495057; margin-bottom:10px; font-size:1.3rem; }
-    .service-card p { color:#6c757d; font-size:0.95rem; }
+    .service-card { background:#111827; padding:25px; border-radius:15px; text-align:center; border:1px solid #334155; transition:all 0.3s ease; }
+    .service-card:hover { transform:translateY(-6px); box-shadow:0 10px 20px rgba(0,0,0,0.5); border-color:#38bdf8; }
+    .service-icon { font-size:2.5rem; margin-bottom:12px; color:#a78bfa; }
+    .service-card h3 { color:#f1f5f9; margin-bottom:10px; font-size:1.2rem; }
+    .service-card p { color:#94a3b8; font-size:0.95rem; }
 
-    .contact-section { background:linear-gradient(135deg,#667eea,#764ba2); color:white; padding:60px 40px; text-align:center; }
-    .contact-section h2 { margin-bottom:20px; font-size:2.3rem; }
-    .contact-section p { max-width:600px; margin:0 auto 30px; }
-    .contact-info { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:20px; }
-    .contact-item { display:flex; align-items:center; gap:10px; font-size:1.1rem; }
-    .cta-button { display:inline-block; background:white; color:#667eea; padding:15px 30px; border-radius:50px; text-decoration:none; font-weight:bold; margin-top:30px; transition:transform 0.3s; }
-    .cta-button:hover { transform:scale(1.05); }
+    /* === Contact === */
+    .contact-section { background:linear-gradient(135deg,#0ea5e9,#6366f1); color:white; padding:60px 30px; text-align:center; }
+    .contact-section h2 { font-size:2.2rem; margin-bottom:15px; }
+    .contact-info { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin:20px 0; font-size:1.05rem; }
+    .cta-button { display:inline-block; background:white; color:#0f172a; padding:14px 28px; border-radius:50px; text-decoration:none; font-weight:600; margin-top:20px; transition:all 0.25s; }
+    .cta-button:hover { transform:scale(1.05); background:#f1f5f9; }
 
-    .footer { text-align:center; padding:30px; color:white; opacity:0.8; font-size:0.9rem; }
+    /* === Footer === */
+    .footer { text-align:center; padding:25px; color:#94a3b8; font-size:0.85rem; }
+    .footer a { color:#38bdf8; text-decoration:none; }
+    .footer a:hover { text-decoration:underline; }
 
+    /* === Responsive === */
     @media (max-width:768px){
-        .header h1{ font-size:2rem; }
+        .header h1{ font-size:2.2rem; }
         .intro-section, .services-section, .contact-section{ padding:40px 20px; }
-        .contact-info{ flex-direction:column; gap:15px; }
+        .contact-info{ flex-direction:column; gap:12px; }
     }
 </style>
 </head>
@@ -52,69 +66,68 @@
 <div class="container">
     <header class="header">
         <h1>mmtechnik</h1>
-        <p>IT- & Technik-Dienstleistungen aus Baden, Schweiz</p>
+        <p>IT-Dienstleistungen aus Baden, Schweiz</p>
     </header>
 
     <main class="main-content">
         <img src="images/header.jpg" alt="IT Dienstleistungen Baden" class="hero-image">
 
         <section class="intro-section">
-            <h2>Über Mathias Melliger</h2>
-            <p>Ich helfe kleinen Unternehmen in Baden und Umgebung, ihre IT einfach, sicher und effizient zu gestalten – mit persönlicher Beratung, direktem Support und praxisnahen Lösungen. Ihre Technik soll Sie nicht aufhalten, sondern vorwärtsbringen.</p>
+            <h2>Über mich</h2>
+            <p>Ich unterstütze KMU und Privatkunden in Baden und Umgebung dabei, ihre IT zuverlässig, sicher und effizient einzusetzen – unkompliziert und praxisnah.</p>
         </section>
 
         <section class="services-section">
             <div class="services-title">
-                <h2>Was ich für Sie tun kann</h2>
+                <h2>Leistungen</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">💻</div>
-                    <h3>IT-Support & Wartung</h3>
-                    <p>Persönlicher Support für PCs, Server & Netzwerke – damit alles stabil läuft</p>
+                    <h3>Support & Wartung</h3>
+                    <p>PCs, Server und Netzwerke betreuen und instand halten</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
-                    <h3>Hardware Einrichtung</h3>
-                    <p>Installation & Konfiguration neuer Geräte vor Ort oder remote</p>
+                    <h3>Hardware</h3>
+                    <p>Installation und Konfiguration neuer Geräte</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <h3>Netzwerk & Sicherheit</h3>
-                    <p>WLAN, Firewall, Backups & Sicherheit – maßgeschneidert für KMU</p>
+                    <p>WLAN, Firewall und Datensicherung für KMU</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">☁️</div>
-                    <h3>Cloud Lösungen</h3>
-                    <p>Microsoft 365, Cloud-Backups & digitale Zusammenarbeit</p>
+                    <h3>Cloud</h3>
+                    <p>Microsoft 365 und moderne Zusammenarbeit</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>Digitalisierung</h3>
-                    <p>Prozesse vereinfachen & modernisieren, digital besser arbeiten</p>
+                    <p>Arbeitsprozesse vereinfachen und modernisieren</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚡</div>
                     <h3>Notfallservice</h3>
-                    <p>Unkomplizierte Hilfe, wenn etwas dringend nicht funktioniert</p>
+                    <p>Schnelle Hilfe bei akuten Problemen</p>
                 </div>
             </div>
         </section>
 
         <section class="contact-section">
-            <h2>Kontaktieren Sie mich</h2>
-            <p>Sie möchten Ihre IT verbessern oder haben ein akutes Problem? Schreiben Sie mir – ich antworte persönlich und zeitnah.</p>
+            <h2>Kontakt</h2>
             <div class="contact-info">
-                <div class="contact-item">📧 info@mmtechnik.com</div>
-                <div class="contact-item">📱 +41 77 265 94 78</div>
-                <div class="contact-item">📍 Baden, Aargau</div>
+                <div>📧 info@mmtechnik.com</div>
+                <div>📱 +41 77 265 94 78</div>
+                <div>📍 Baden, Aargau</div>
             </div>
-            <a href="mailto:info@mmtechnik.com" class="cta-button">Jetzt Kontakt aufnehmen</a>
+            <a href="mailto:info@mmtechnik.com" class="cta-button">Nachricht senden</a>
         </section>
     </main>
 
     <footer class="footer">
-        &copy; 2025 Mathias Melliger – mmtechnik | <a href="https://www.linkedin.com/in/mathias-melliger-b3a091171/" style="color:white; text-decoration:underline;">LinkedIn</a>
+        &copy; 2025 Mathias Melliger – mmtechnik | <a href="https://www.linkedin.com/in/mathias-melliger-b3a091171/">LinkedIn</a>
     </footer>
 </div>
 </body>
