@@ -1,6 +1,5 @@
 # 👋 Hi, I’m M  
 
-![Profile Views](https://komarev.com/ghpvc/?username=mmtechnik&color=blue&style=flat-square)  
 ![Made in Switzerland](https://img.shields.io/badge/Made%20in-Switzerland-red?style=flat-square&logo=swiss)  
 ![Linux](https://img.shields.io/badge/Linux-Geek-333?style=flat-square&logo=linux)  
 ![Windows](https://img.shields.io/badge/Windows-Admin-blue?style=flat-square&logo=windows)  
